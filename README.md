@@ -33,8 +33,8 @@ Follow these steps to set up the project:
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   git clone https://github.com/arvindkr7/StabilityAI.git
+   cd StabilityAI
 
 2. **Create a Virtual Environment:**
     ```bash
@@ -51,11 +51,15 @@ Follow these steps to set up the project:
     ```
 
 4. **Install Required Packages:**
+
+   > *Make sure venv is activated
     ```bash
     pip install -r requirements.txt
     ```
 
-5. **Apply migrations**
+6. **Apply migrations**
+   
+   > *Make sure venv is activated
     ```bash
     python manage.py makemigrations
     python manage.py migrate
@@ -66,7 +70,7 @@ Follow these steps to set up the project:
 1. **Environment Variables: Create a .env file in the root of your project directory and add the necessary configurations:**
 
     ```bash
-    API_KEY=your_secret_key
+    API_KEY=stability_ai_secret_key
     ```
 
 ## Running the Application
@@ -84,11 +88,15 @@ Follow these steps to set up the project:
         > PONG
 
 2. **Start the Django Server:**
+   
+   > *Make sure venv is activated
     ```bash
     python manage.py runserver
     ```
 
-3. **Start Celery Worker Using Gevent:**
+4. **Start Celery Worker Using Gevent:**
+
+   > *Make sure venv is activated
     ```bash
     celery -A myproject worker -l info --pool=gevent
     ```
@@ -99,13 +107,13 @@ Once the server is running, you can generate images by sending a request to the 
 
 ## Endpoints
 ### Generate Images
-- URL: /image/generate/
+- URL: /image/generate/?prompts=
 - Method: GET
 - Query Parameters:
     - `prompts`: A comma-separated list of text prompts.
 
 - Example:
-    http://127.0.0.1:8000/image/generate/?prompts=flying%20machine,robotic%20dog
+    http://127.0.0.1:8000/image/generate/?prompts=flying machine,robotic dog
     
 - Response: 
     ```json
