@@ -1,0 +1,8 @@
+Django
+celery
+redis
+requests
+pillow
+django-celery-results
+python-dotenv
+gevent
