@@ -18,6 +18,7 @@ This Django application generates images using Stability AI’s Text-to-Image ge
 
 Before you begin, ensure you have the following installed:
 
+- **StabilityAI API KEY:** [create/login to your Stability AI account](https://platform.stability.ai/account/keys)
 - **Python 3.11+**
 - **Redis**: Redis should be installed and running as the Celery message broker. You can install Redis via package manager:
   - **Ubuntu/Debian**: `sudo apt install redis-server`
