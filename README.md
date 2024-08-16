@@ -68,7 +68,9 @@ Follow these steps to set up the project:
 
 ## Configuration
 
-1. **Environment Variables: Create a .env file in the root of your project directory and add the necessary configurations:**
+1. **Environment Variables:**
+
+   Create a **.env** file in the root of your project directory and add the necessary configurations:
 
     ```bash
     API_KEY=stability_ai_secret_key
